@@ -51,8 +51,7 @@ public class Injector {
 
             return instance;
 
-        } catch (InstantiationException | IllegalAccessException
-                 | NoSuchMethodException | InvocationTargetException e) {
+        } catch (ReflectiveOperationException e) {
             throw new RuntimeException("Unable to instantiate " + implementationClass.getName(), e);
         }
     }
